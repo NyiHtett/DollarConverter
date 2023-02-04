@@ -1,14 +1,15 @@
-//
-//  main.cpp
-//  Testing
-//
-//  Created by Nyi Htet on 2/3/23.
-//
-
-#include <iostream>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+#include<iostream>
+#include<iomanip>
+using namespace std;
+int main(){
+    double val;
+    int dollar;
+    int quarter;
+    int cent;
+    cout << "assign dollar value: ";
+    cin >> val;
+    dollar = val; //truncate
+    quarter = ((val-dollar)*100) / 25;
+    cent = static_cast<int>((val-dollar)*100) % 25;
+    cout << dollar << " dollar " << quarter << " quarter " << cent << " cent" <<endl;
 }
